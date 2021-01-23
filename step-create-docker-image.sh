@@ -5,7 +5,7 @@ set -e
 RUN_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $RUN_PATH
 
-IPFS_GATEWAY_LIMITED_VERSION=1.0.1
+IPFS_GATEWAY_LIMITED_VERSION=1.1.0
 IPFS_VERSION=0.7.0
 
 echo ----[ Download assets ]----
