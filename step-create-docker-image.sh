@@ -5,15 +5,15 @@ set -e
 RUN_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $RUN_PATH
 
-IPFS_GATEWAY_LIMITED_VERSION=1.1.0
-IPFS_VERSION=0.7.0
+IPFS_GATEWAY_LIMITED_VERSION=1.1.1
+IPFS_VERSION=0.9.1
 
 echo ----[ Download assets ]----
 mkdir -p _assets
 cd _assets
 
 if [ ! -f ipfs-gateway-limited_${IPFS_GATEWAY_LIMITED_VERSION}_amd64.deb ] ; then
-    wget https://dl.bintray.com/foilen/debian/ipfs-gateway-limited_${IPFS_GATEWAY_LIMITED_VERSION}_amd64.deb
+    wget https://deploy.foilen.com/ipfs-gateway-limited/ipfs-gateway-limited_${IPFS_GATEWAY_LIMITED_VERSION}_amd64.deb
     ar x ipfs-gateway-limited_${IPFS_GATEWAY_LIMITED_VERSION}_amd64.deb
     tar -Jxf data.tar.xz
 fi
