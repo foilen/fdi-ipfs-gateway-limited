@@ -1,6 +1,6 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
-RUN adduser --disabled-password ipfs
+RUN useradd -m -s /bin/bash ipfs
 
 COPY _assets/usr/bin/ipfs-gateway-limited _assets/go-ipfs/ipfs /usr/bin/
 RUN chmod 755 /usr/bin/ipfs-gateway-limited /usr/bin/ipfs
